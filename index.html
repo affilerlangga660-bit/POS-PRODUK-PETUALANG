@@ -397,12 +397,26 @@
 
     <script>
         const productsCatalog = [
-            { id: "P01", name: "Sawarna", category: "Sepatu", price: 239900, sizes: ["38", "39", "40", "41", "42", "43"], colors: ["Pumpkin", "Blue", "Grey", "Black"], icon: "fa-shoe-prints" },
-            { id: "P02", name: "Sawarna Jr", category: "Junior", price: 229900, sizes: ["33", "34", "35", "36", "37"], colors: ["Pumpkin", "Blue", "Grey", "Black"], icon: "fa-shoe-prints" },
-            { id: "P03", name: "Bunaken 20", category: "Sepatu", price: 249900, sizes: ["37", "38", "39", "40", "41", "42"], colors: ["Black", "Blue", "Brown", "Grey"], icon: "fa-shoe-prints" },
-            { id: "P04", name: "Karimun 2.0", category: "Sepatu", price: 189900, sizes: ["37", "38", "39", "40", "41", "42"], colors: ["Grey", "Blue", "Brown", "Black"], icon: "fa-shoe-prints" },
-            { id: "P05", name: "Towuti Strap 2.0", category: "Sandal", price: 229900, sizes: ["38", "39", "40", "41", "42", "43"], colors: ["Black", "Grey", "Stone"], icon: "fa-mound" },
-            { id: "P06", name: "Kelimutu Clip", category: "Sandal", price: 149900, sizes: ["38", "39", "40", "41", "42", "43"], colors: ["Green", "Black"], icon: "fa-mound" }
+            { id: "P01", name: "Sawarna", category: "Sepatu", price: 239900, sizes: ["38", "39", "40", "41", "42", "43"], colors: ["Pumpkin Space", "Legion Blue", "Asphalt Grey", "All Black"], icon: "fa-shoe-prints" },
+            { id: "P02", name: "Sawarna Jr", category: "Junior", price: 229900, sizes: ["33", "34", "35", "36", "37", "38", "39", "40", "41", "42", "43"], colors: ["Pumpkin Space", "Legion Blue", "Asphalt Grey", "All Black"], icon: "fa-shoe-prints" },
+            { id: "P03", name: "Bunaken 20", category: "Sepatu", price: 249900, sizes: ["37", "38", "39", "40", "41", "42", "43", "44"], colors: ["All Black", "Legion Blue", "Golden Brown", "Iron Grey", "Captain Sea"], icon: "fa-shoe-prints" },
+            { id: "P04", name: "Karimun 2.0", category: "Sepatu", price: 189900, sizes: ["37", "38", "39", "40", "41", "42", "43", "44"], colors: ["Iron Grey", "Legion Blue", "Golden Brown", "All Black"], icon: "fa-shoe-prints" },
+            { id: "P05", name: "Anambas", category: "Sepatu", price: 189900, sizes: ["36", "37", "38", "39", "40"], colors: ["Dusty Green", "Dusty Pink", "Dusty Blue"], icon: "fa-shoe-prints" },
+            { id: "P06", name: "Towuti Strap 2.0", category: "Sandal", price: 229900, sizes: ["38", "39", "40", "41", "42", "43", "44", "45"], colors: ["All Black", "Iron Grey", "Brick Stone"], icon: "fa-mound" },
+            { id: "P07", name: "Towuti Clip Strap 2.0", category: "Sandal", price: 229900, sizes: ["38", "39", "40", "41", "42", "43", "44", "45"], colors: ["Deep Black", "Brick Stone", "All Black"], icon: "fa-mound" },
+            { id: "P08", name: "Towuti Clip", category: "Sandal", price: 149900, sizes: ["38", "39", "40", "41", "42", "43", "44", "45"], colors: ["Brick Stone", "Iron Grey", "All Black", "Deep Black", "Legion Blue"], icon: "fa-mound" },
+            { id: "P09", name: "Kelimutu Clip", category: "Sandal", price: 149900, sizes: ["38", "39", "40", "41", "42", "43", "44", "45"], colors: ["Emerald Green", "All Black"], icon: "fa-mound" },
+            { id: "P10", name: "Kelimutu Strap", category: "Sandal", price: 229900, sizes: ["38", "39", "40", "41", "42", "43", "44", "45"], colors: ["Emerald Green", "All Black"], icon: "fa-mound" },
+            { id: "P11", name: "Towuti Clip Strap Jr", category: "Junior", price: 189900, sizes: ["33", "34", "35", "36", "37"], colors: ["Brick Stone", "All Black"], icon: "fa-mound" },
+            { id: "P12", name: "Towuti Clip Jr", category: "Junior", price: 139900, sizes: ["33", "34", "35", "36", "37"], colors: ["Brick Stone", "Iron Grey", "All Black", "Deep Black", "Legion Blue"], icon: "fa-mound" },
+            { id: "P13", name: "Maninjau Strap 2.0", category: "Sandal", price: 229900, sizes: ["38", "39", "40", "41", "42", "43", "44", "45"], colors: ["Iron Grey"], icon: "fa-mound" },
+            { id: "P14", name: "Maninjau Strap Jr", category: "Junior", price: 199900, sizes: ["33", "34", "35", "36", "37"], colors: ["Forest Night", "Sky Blue", "Iron Grey"], icon: "fa-mound" },
+            { id: "P15", name: "Towuti Strap Jr", category: "Junior", price: 199900, sizes: ["33", "34", "35", "36", "37"], colors: ["All Black", "Iron Grey", "Brick Stone"], icon: "fa-mound" },
+            { id: "P16", name: "Rote", category: "Sepatu", price: 199900, sizes: ["37", "38", "39", "40", "41", "42", "43", "44"], colors: ["Obsidian Black", "Terracotta Brick"], icon: "fa-shoe-prints" },
+            { id: "P17", name: "Sembalun Low", category: "Sepatu", price: 679900, sizes: ["35", "36", "37", "38", "39", "40", "41", "42", "43", "44", "45", "46"], colors: ["All Black", "Legion Blue", "Terracotta"], icon: "fa-mountain-sun" },
+            { id: "P18", name: "Sembalun Mid", category: "Sepatu", price: 799900, sizes: ["35", "36", "37", "38", "39", "40", "41", "42", "43", "44", "45", "46"], colors: ["Legion Blue", "Terracotta", "All Black"], icon: "fa-mountain-sun" },
+            { id: "P19", name: "Sagara", category: "Sepatu", price: 519900, sizes: ["35", "36", "37", "38", "39", "40", "41", "42", "43", "44", "45", "46"], colors: ["Ivory White", "Alltres", "Midnight Black", "Excalibur Grey"], icon: "fa-mountain-sun" },
+            { id: "P20", name: "Kairatu", category: "Sepatu", price: 719900, sizes: ["35", "36", "37", "38", "39", "40", "41", "42", "43", "44", "45", "46"], colors: ["Black", "Electric Grey", "Legend Blue"], icon: "fa-mountain-sun" }
         ];
 
         let cart = [];
@@ -453,7 +467,6 @@
                 });
 
                 const server = await bluetoothDevice.gatt.connect();
-                // Cari service umum printer thermal ESC/POS
                 const services = await server.getPrimaryServices();
                 for (let service of services) {
                     const characteristics = await service.getCharacteristics();
@@ -479,14 +492,12 @@
 
         async function sendToBluetoothPrinter(textData) {
             if (!bluetoothCharacteristic) {
-                // Coba hubungkan otomatis jika belum terkoneksi
                 await toggleBluetoothConnection();
             }
             if (bluetoothCharacteristic) {
                 try {
                     const encoder = new TextEncoder();
                     const data = encoder.encode(textData + "\n\n\n");
-                    // Kirim per blok jika data panjang
                     const chunkSize = 512;
                     for (let i = 0; i < data.length; i += chunkSize) {
                         let chunk = data.slice(i, i + chunkSize);
@@ -700,7 +711,6 @@
             renderTransactionsTable();
             updateStats();
 
-            // Cek apakah fitur Auto Print aktif
             const isAutoPrint = document.getElementById('auto-print-toggle').checked;
             if (isAutoPrint) {
                 executeAutoPrint(newTrx);
@@ -710,7 +720,6 @@
         }
 
         async function executeAutoPrint(trx) {
-            // Coba cetak otomatis via Bluetooth jika terhubung, jika tidak, pakai cetak standar/browser
             let textReceipt = `\n     PETUALANG OUTDOOR     \n`;
             textReceipt += `   Sang Pemberani Store   \n`;
             textReceipt += `--------------------------\n`;
@@ -718,7 +727,7 @@
             textReceipt += `Tgl : ${trx.date}\n`;
             textReceipt += `--------------------------\n`;
             trx.items.forEach(i => {
-                textReceipt += `${i.name} (${i.size})\n`;
+                textReceipt += `${i.name} (${i.size}, ${i.color})\n`;
                 textReceipt += `${i.qty} x ${i.price.toLocaleString('id-ID')} = ${(i.qty*i.price).toLocaleString('id-ID')}\n`;
             });
             textReceipt += `--------------------------\n`;
@@ -748,7 +757,7 @@
             t.items.forEach(i => {
                 const row = document.createElement('div');
                 row.className = "flex justify-between items-start";
-                row.innerHTML = `<div class="pr-2"><p class="font-bold">${i.name} (${i.size})</p><p class="text-[9px] text-slate-600">${i.qty} x Rp ${i.price.toLocaleString('id-ID')}</p></div><span class="font-semibold">Rp ${(i.qty * i.price).toLocaleString('id-ID')}</span>`;
+                row.innerHTML = `<div class="pr-2"><p class="font-bold">${i.name} (${i.size}, ${i.color})</p><p class="text-[9px] text-slate-600">${i.qty} x Rp ${i.price.toLocaleString('id-ID')}</p></div><span class="font-semibold">Rp ${(i.qty * i.price).toLocaleString('id-ID')}</span>`;
                 list.appendChild(row);
             });
             document.getElementById('receipt-modal').classList.remove('hidden');
