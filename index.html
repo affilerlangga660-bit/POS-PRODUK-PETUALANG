@@ -44,29 +44,33 @@
             #thermal-receipt {
                 position: absolute; left: 0; top: 0; width: 58mm;
                 font-family: 'Courier New', Courier, monospace;
-                font-size: 11px; color: #000; background: #fff; padding: 5px;
+                font-size: 11px; color: #000; background: #fff; padding: 10px 5px;
             }
         }
     </style>
 </head>
 <body class="bg-slate-100 text-slate-800 font-sans h-full flex flex-col overflow-hidden">
 
-    <header class="bg-slate-900 text-white shadow-md z-20 flex items-center justify-between px-4 py-3 border-b border-slate-800 shrink-0">
+    <header class="bg-slate-900 text-white shadow-md z-20 flex items-center justify-between px-4 py-2.5 border-b border-slate-800 shrink-0">
         <div class="flex items-center space-x-3">
-            <div class="bg-gradient-to-tr from-orange-600 to-amber-500 text-white font-black px-3 py-1.5 rounded-lg shadow-lg flex items-center space-x-1.5 tracking-wider text-lg">
-                <i class="fa-solid fa-mountain text-white"></i>
-                <span>ANGSANA</span>
+            <!-- Logo ANGSANA SVG Presisi -->
+            <div class="bg-black p-2 rounded-xl border border-slate-800 shadow-md flex items-center justify-center">
+                <svg class="w-28 h-auto" viewBox="0 0 400 180" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M 200 25 L 305 130 L 250 130 L 225 100 L 200 120 L 200 95 L 215 80 L 200 60 L 185 80 L 170 60 L 150 85 L 120 50 L 95 85 L 145 130 L 90 130 L 200 25 Z" fill="#E2E8F0" />
+                    <path d="M 200 35 L 285 120 L 255 120 L 225 90 L 200 110 L 200 85 L 215 70 L 200 50 L 185 70 L 170 50 L 150 75 L 125 45 L 105 75 L 145 120 L 115 120 L 200 35 Z" fill="#0F172A" />
+                    <text x="200" y="152" font-family="'Inter', Arial, sans-serif" font-weight="900" font-size="28" fill="#E2E8F0" text-anchor="middle" letter-spacing="4">ANGSANA</text>
+                    <text x="200" y="172" font-family="'Inter', Arial, sans-serif" font-weight="800" font-size="13" fill="#EF4444" text-anchor="middle" letter-spacing="3">ADVENTURE ESSENTIAL</text>
+                </svg>
             </div>
             <div>
                 <h1 class="font-bold text-sm sm:text-base tracking-wide flex items-center gap-2">
-                    Sang Pemberani 
+                    Petualang POS 
                     <span class="text-xs bg-orange-500/20 text-orange-400 font-semibold px-2 py-0.5 rounded-full border border-orange-500/30">#BANGGABUATANINDONESIA</span>
                 </h1>
                 <p class="text-xs text-slate-400 hidden sm:block">Official Outdoor Footwear Point of Sales & Inventory</p>
             </div>
         </div>
 
-        <!-- Navigation & Bluetooth Connection Status -->
         <div class="flex items-center space-x-2">
             <button onclick="toggleBluetoothConnection()" id="bt-status-btn" class="px-3 py-1.5 rounded-lg text-xs font-semibold bg-slate-800 hover:bg-slate-700 text-slate-300 border border-slate-700 transition flex items-center gap-1.5">
                 <i class="fa-brands fa-bluetooth text-blue-400"></i>
@@ -241,7 +245,7 @@
                 <div class="flex items-center justify-between pb-4 border-b border-slate-200 gap-4 shrink-0">
                     <div>
                         <h2 class="text-lg sm:text-xl font-bold text-slate-900 flex items-center gap-2">
-                            <i class="fa-solid fa-boxes-stacked text-orange-600"></i> Katalog Alas Kaki Outdoor
+                            <i class="fa-solid fa-boxes-stacked text-orange-600"></i> Katalog Alas Kaki Outdoor Petualang
                         </h2>
                         <p class="text-xs sm:text-sm text-slate-500">Daftar lengkap spesifikasi dan varian produk.</p>
                     </div>
@@ -362,25 +366,71 @@
 
             <div class="p-4 overflow-y-auto flex-1 bg-slate-100 flex justify-center">
                 <div id="thermal-receipt" class="w-[58mm] bg-white p-3 font-mono text-[11px] text-black shadow-md border border-slate-300 rounded leading-tight space-y-2">
-                    <div class="text-center space-y-0.5 pb-2 border-b border-dashed border-slate-400">
-                        <h4 class="font-black text-xs uppercase">PETUALANG OUTDOOR</h4>
-                        <p class="text-[9px] text-slate-600">Sang Pemberani (#BANGGABUATANINDONESIA)</p>
+                    
+                    <!-- Header Logo ANGSANA SVG untuk Struk Thermal -->
+                    <div class="text-center space-y-1 pb-2">
+                        <div class="flex justify-center items-center py-1">
+                            <svg class="w-24 h-auto" viewBox="0 0 400 180" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M 200 25 L 305 130 L 250 130 L 225 100 L 200 120 L 200 95 L 215 80 L 200 60 L 185 80 L 170 60 L 150 85 L 120 50 L 95 85 L 145 130 L 90 130 L 200 25 Z" fill="#000000" />
+                                <text x="200" y="152" font-family="'Inter', Arial, sans-serif" font-weight="900" font-size="28" fill="#000000" text-anchor="middle" letter-spacing="4">ANGSANA</text>
+                                <text x="200" y="172" font-family="'Inter', Arial, sans-serif" font-weight="800" font-size="13" fill="#000000" text-anchor="middle" letter-spacing="3">ADVENTURE ESSENTIAL</text>
+                            </svg>
+                        </div>
+                        <p class="text-[10px] font-semibold">Petualang Angsana Outdoor</p>
+                        <p class="text-[10px]">Receipt No. <span id="rcp-id">#3-4805</span></p>
                     </div>
-                    <div class="text-[10px] space-y-0.5 pb-2 border-b border-dashed border-slate-400">
-                        <div class="flex justify-between"><span>No:</span><span id="rcp-id">TRX-001</span></div>
-                        <div class="flex justify-between"><span>Tgl:</span><span id="rcp-date">12/10/2026</span></div>
-                        <div class="flex justify-between"><span>Kasir:</span><span>Admin</span></div>
+
+                    <!-- Order Date & Cashier -->
+                    <div class="text-[10px] space-y-1 py-1 border-t border-b border-dashed border-slate-400">
+                        <div class="flex justify-between">
+                            <span>Order Date</span>
+                            <span id="rcp-date">13/10/2026 18:04:03</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span>Cashier</span>
+                            <span id="rcp-cashier" class="font-bold">PETUALANG CASHIER</span>
+                        </div>
                     </div>
-                    <div id="rcp-items-list" class="space-y-1.5 pb-2 border-b border-dashed border-slate-400"></div>
-                    <div class="space-y-0.5 pb-2 border-b border-dashed border-slate-400 text-[10px]">
-                        <div class="flex justify-between font-bold"><span>TOTAL:</span><span id="rcp-total">Rp 0</span></div>
-                        <div class="flex justify-between"><span id="rcp-method-label">TUNAI:</span><span id="rcp-cash-given">Rp 0</span></div>
-                        <div class="flex justify-between"><span>KEMBALI:</span><span id="rcp-change">Rp 0</span></div>
+
+                    <div class="text-center text-[10px] py-0.5 border-b border-dashed border-slate-400">
+                        <span>Copy : 1</span>
                     </div>
-                    <div class="text-center text-[9px] space-y-1 pt-1">
-                        <p class="font-bold">TERIMA KASIH</p>
-                        <p>#BanggaBuatanIndonesia</p>
+
+                    <!-- Items List -->
+                    <div id="rcp-items-list" class="space-y-2 py-2 border-b border-dashed border-slate-400 text-[10px]"></div>
+
+                    <!-- Totals -->
+                    <div class="space-y-1 py-1 border-b border-dashed border-slate-400 text-[10px]">
+                        <div class="flex justify-between">
+                            <span>Subtotal</span>
+                            <span id="rcp-subtotal">0</span>
+                        </div>
+                        <div class="flex justify-between font-bold">
+                            <span>TOTAL</span>
+                            <span id="rcp-total">0</span>
+                        </div>
                     </div>
+
+                    <!-- Payment Method & Amount -->
+                    <div class="space-y-1 py-1 border-b border-dashed border-slate-400 text-[10px]">
+                        <div class="flex justify-between font-bold">
+                            <span id="rcp-method">TUNAI</span>
+                            <span id="rcp-cash-given">0</span>
+                        </div>
+                    </div>
+
+                    <!-- Footer Social & Greeting -->
+                    <div class="text-center text-[9px] space-y-2 pt-2 text-slate-800">
+                        <div class="flex items-center justify-center gap-1">
+                            <i class="fa-brands fa-instagram text-xs"></i>
+                            <span class="font-bold">angsana_adventure</span>
+                        </div>
+                        <div class="space-y-0.5">
+                            <p class="italic">Thanks for stopping by.</p>
+                            <p class="font-bold text-[8px] tracking-wider uppercase text-slate-600">Powered by Petualang POS</p>
+                        </div>
+                    </div>
+
                 </div>
             </div>
 
@@ -497,7 +547,7 @@
             if (bluetoothCharacteristic) {
                 try {
                     const encoder = new TextEncoder();
-                    const data = encoder.encode(textData + "\n\n\n");
+                    const data = encoder.encode(textData + "\n\n\n\n");
                     const chunkSize = 512;
                     for (let i = 0; i < data.length; i += chunkSize) {
                         let chunk = data.slice(i, i + chunkSize);
@@ -576,7 +626,18 @@
             const existing = cart.find(i => i.cartItemId === cartItemId);
 
             if (existing) { existing.qty += 1; } 
-            else { cart.push({ cartItemId, productId, name: product.name, price: product.price, size, color, qty: 1 }); }
+            else { 
+                cart.push({ 
+                    cartItemId, 
+                    productId, 
+                    name: product.name, 
+                    category: product.category, // SEPATU / SANDAL / JUNIOR
+                    price: product.price, 
+                    size, 
+                    color, 
+                    qty: 1 
+                }); 
+            }
             renderCart();
         }
 
@@ -620,7 +681,7 @@
                 div.innerHTML = `
                     <div class="flex justify-between items-start">
                         <div>
-                            <h4 class="font-bold text-sm text-slate-900">${item.name}</h4>
+                            <h4 class="font-bold text-sm text-slate-900">${item.category.toUpperCase()} ${item.name}</h4>
                             <p class="text-[11px] text-slate-500">Size: ${item.size} | Warna: ${item.color}</p>
                         </div>
                         <button onclick="removeFromCart('${item.cartItemId}')" class="text-slate-400 hover:text-red-500 text-xs"><i class="fa-solid fa-trash"></i></button>
@@ -692,9 +753,9 @@
             const subtotal = cart.reduce((a, i) => a + (i.price * i.qty), 0);
             const cash = currentPaymentMethod === 'Tunai' ? (parseFloat(document.getElementById('cash-given').value) || subtotal) : subtotal;
             const newTrx = {
-                id: 'TRX-' + Math.floor(100000 + Math.random() * 900000),
-                date: new Date().toLocaleString('id-ID'),
-                cashier: 'Admin',
+                id: '#3-' + Math.floor(1000 + Math.random() * 9000),
+                date: new Date().toLocaleDateString('id-ID') + ' ' + new Date().toLocaleTimeString('id-ID'),
+                cashier: 'PETUALANG CASHIER',
                 items: [...cart],
                 total: subtotal,
                 method: currentPaymentMethod,
@@ -719,23 +780,36 @@
             }
         }
 
+        function formatIDRCurrency(val) {
+            return val.toLocaleString('id-ID');
+        }
+
         async function executeAutoPrint(trx) {
-            let textReceipt = `\n     PETUALANG OUTDOOR     \n`;
-            textReceipt += `   Sang Pemberani Store   \n`;
-            textReceipt += `--------------------------\n`;
-            textReceipt += `No  : ${trx.id}\n`;
-            textReceipt += `Tgl : ${trx.date}\n`;
-            textReceipt += `--------------------------\n`;
+            let textReceipt = `\n`;
+            textReceipt += `          ANGSANA         \n`;
+            textReceipt += `    ADVENTURE ESSENTIAL   \n\n`;
+            textReceipt += `   Petualang Angsana Outdoor\n`;
+            textReceipt += ` Receipt No. ${trx.id}\n`;
+            textReceipt += `------------------------------\n`;
+            textReceipt += `Order Date  ${trx.date}\n`;
+            textReceipt += `Cashier            ${trx.cashier}\n`;
+            textReceipt += `------------------------------\n`;
+            textReceipt += `            Copy : 1          \n`;
+            textReceipt += `------------------------------\n`;
             trx.items.forEach(i => {
-                textReceipt += `${i.name} (${i.size}, ${i.color})\n`;
-                textReceipt += `${i.qty} x ${i.price.toLocaleString('id-ID')} = ${(i.qty*i.price).toLocaleString('id-ID')}\n`;
+                let categoryName = i.category ? i.category.toUpperCase() : "PRODUK";
+                textReceipt += `${i.qty} ${categoryName} ${i.name.toUpperCase()}  ${formatIDRCurrency(i.qty * i.price)}\n`;
+                textReceipt += `   ${i.color.toUpperCase()}\n`;
+                textReceipt += `   Size ${i.size}\n\n`;
             });
-            textReceipt += `--------------------------\n`;
-            textReceipt += `TOTAL : Rp ${trx.total.toLocaleString('id-ID')}\n`;
-            textReceipt += `BAYAR : Rp ${trx.cashGiven.toLocaleString('id-ID')}\n`;
-            textReceipt += `KEMBALI:Rp ${trx.change.toLocaleString('id-ID')}\n`;
-            textReceipt += `--------------------------\n`;
-            textReceipt += `Terima Kasih Berpetualang!\n`;
+            textReceipt += `------------------------------\n`;
+            textReceipt += `Subtotal            ${formatIDRCurrency(trx.total)}\n`;
+            textReceipt += `TOTAL               ${formatIDRCurrency(trx.total)}\n\n`;
+            textReceipt += `${trx.method.toUpperCase()}                ${formatIDRCurrency(trx.cashGiven)}\n`;
+            textReceipt += `------------------------------\n\n`;
+            textReceipt += `      angsana_adventure       \n\n`;
+            textReceipt += `   Thanks for stopping by.    \n`;
+            textReceipt += `    Powered by Petualang      \n`;
 
             const success = await sendToBluetoothPrinter(textReceipt);
             if (!success) {
@@ -748,16 +822,28 @@
             if (!t) return;
             document.getElementById('rcp-id').innerText = t.id;
             document.getElementById('rcp-date').innerText = t.date;
-            document.getElementById('rcp-total').innerText = `Rp ${t.total.toLocaleString('id-ID')}`;
-            document.getElementById('rcp-cash-given').innerText = `Rp ${t.cashGiven.toLocaleString('id-ID')}`;
-            document.getElementById('rcp-change').innerText = `Rp ${t.change.toLocaleString('id-ID')}`;
+            document.getElementById('rcp-cashier').innerText = t.cashier;
+            document.getElementById('rcp-subtotal').innerText = formatIDRCurrency(t.total);
+            document.getElementById('rcp-total').innerText = formatIDRCurrency(t.total);
+            document.getElementById('rcp-method').innerText = t.method.toUpperCase();
+            document.getElementById('rcp-cash-given').innerText = formatIDRCurrency(t.cashGiven);
 
             const list = document.getElementById('rcp-items-list');
             list.innerHTML = '';
             t.items.forEach(i => {
+                let categoryName = i.category ? i.category.toUpperCase() : "PRODUK";
                 const row = document.createElement('div');
-                row.className = "flex justify-between items-start";
-                row.innerHTML = `<div class="pr-2"><p class="font-bold">${i.name} (${i.size}, ${i.color})</p><p class="text-[9px] text-slate-600">${i.qty} x Rp ${i.price.toLocaleString('id-ID')}</p></div><span class="font-semibold">Rp ${(i.qty * i.price).toLocaleString('id-ID')}</span>`;
+                row.className = "space-y-0.5";
+                row.innerHTML = `
+                    <div class="flex justify-between font-bold">
+                        <span>${i.qty} ${categoryName} ${i.name.toUpperCase()}</span>
+                        <span>${formatIDRCurrency(i.qty * i.price)}</span>
+                    </div>
+                    <div class="text-[9px] text-slate-700 pl-3">
+                        <p>${i.color.toUpperCase()}</p>
+                        <p>Size ${i.size}</p>
+                    </div>
+                `;
                 list.appendChild(row);
             });
             document.getElementById('receipt-modal').classList.remove('hidden');
@@ -777,7 +863,7 @@
                 return;
             }
             transactions.forEach(trx => {
-                const summary = trx.items.map(i => `${i.name} (${i.size}) x${i.qty}`).join(', ');
+                const summary = trx.items.map(i => `${i.category} ${i.name} (${i.size}) x${i.qty}`).join(', ');
                 const tr = document.createElement('tr');
                 tr.className = "hover:bg-slate-50 transition border-b border-slate-100";
                 tr.innerHTML = `
@@ -815,7 +901,7 @@
             if (transactions.length === 0) { alert('Tidak ada data.'); return; }
             let csv = "ID,Tanggal,Kasir,Item,Total,Metode\r\n";
             transactions.forEach(t => {
-                csv += `"${t.id}","${t.date}","${t.cashier}","${t.items.map(i=>i.name).join(';')}",${t.total},"${t.method}"\r\n`;
+                csv += `"${t.id}","${t.date}","${t.cashier}","${t.items.map(i=>`${i.category}${i.name}`).join(';')}",${t.total},"${t.method}"\r\n`;
             });
             const blob = new Blob([csv], { type: 'text/csv;charset=utf-8;' });
             const link = document.createElement("a");
